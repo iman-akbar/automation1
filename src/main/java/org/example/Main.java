@@ -35,23 +35,16 @@ public class Main {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"POCO M3 Pro 5G");
 
 //        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\iman akbar\\Downloads\\baru2.apk");
-        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\iman akbar\\Downloads\\oke.apk");
+        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\iman akbar\\Downloads\\app-debug.apk");
 
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
 
 
         driver  = new AndroidDriver(url, capabilities);
 
+
         Thread.sleep(5000);
-        driver.findElement(By.id("md_buttonDefaultNegative")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.drawerlayout.widget.DrawerLayout[1]/android.view.ViewGroup[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[2]/android.widget.ImageButton[1]")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.drawerlayout.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.ScrollView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.LinearLayout[8]/android.widget.TextView[1]")).click();
-        Thread.sleep(10000);
-        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.drawerlayout.widget.DrawerLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/androidx.viewpager.widget.ViewPager[2]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/androidx.recyclerview.widget.RecyclerView[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.ImageView[1]")).click();
-        Thread.sleep(5000);
-        driver.findElement(By.id("news_type_video")).click();
+        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]")).click();
 //        Thread.sleep(10000);
 //        driver.findElement(By.id("email")).sendKeys("test@ss.co");
 
