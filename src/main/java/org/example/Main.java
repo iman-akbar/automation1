@@ -43,13 +43,20 @@ public class Main {
         driver  = new AndroidDriver(url, capabilities);
 
 
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]")).click();
-//        Thread.sleep(10000);
-//        driver.findElement(By.id("email")).sendKeys("test@ss.co");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[3]")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[1]/android.view.View[1]")).click();
+
+        driver.findElement(By.id("exo_play_pause")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.id("exo_play_pause")).click();
 
 
-//        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+
 
 
         try {
