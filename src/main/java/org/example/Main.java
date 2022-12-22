@@ -14,6 +14,7 @@ public class Main {
     public static AndroidDriver driver;
     public static URL url;
     public static void main(String[] args) throws MalformedURLException,InterruptedException {
+
         System.out.println("Hello world!");
         final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
 
@@ -29,33 +30,30 @@ public class Main {
 //        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"emulator-5554");
 //        capabilities.setCapability(MobileCapabilityType.UDID,"M5AIGF000706MZW");
 //        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"ROG Phone 5");
-//        capabilities.setCapability(MobileCapabilityType.UDID,"emulator-5554");
-//        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"AOSP on IA Emulator");
-        capabilities.setCapability(MobileCapabilityType.UDID,"uguoqkfqbuvouotg");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"POCO M3 Pro 5G");
+        capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AOSP on IA Emulator");
+//        capabilities.setCapability(MobileCapabilityType.UDID,"uguoqkfqbuvouotg");
+//        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"POCO M3 Pro 5G");
 
 //        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\iman akbar\\Downloads\\baru2.apk");
-        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\iman akbar\\Downloads\\app-debug.apk");
-
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+        int x = 100;
+        while (x != 0) {
+            System.out.println(x);
+            capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\iman akbar\\Downloads\\app-debug.apk");
 
 
-        driver  = new AndroidDriver(url, capabilities);
+            driver = new AndroidDriver(url, capabilities);
 
 
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[3]")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[1]/android.view.View[1]")).click();
-
-        driver.findElement(By.id("exo_play_pause")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.id("exo_play_pause")).click();
-
-
-
+            Thread.sleep(5000);
+            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]")).click();
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[3]")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[1]/android.view.View[1]")).click();
+            driver.findElement(By.id("exo_play_pause")).click();
+            driver.findElement(By.id("exo_play_pause")).click();
 
 
 
@@ -65,6 +63,7 @@ public class Main {
             System.out.println("error");
             throw new RuntimeException(e);
         }
-
+        x--;
+    }
     }
 }
