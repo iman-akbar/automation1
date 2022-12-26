@@ -1,4 +1,5 @@
 package org.example;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.By;
@@ -9,6 +10,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+
+import static io.appium.java_client.touch.WaitOptions.waitOptions;
+import static io.appium.java_client.touch.offset.PointOption.point;
+import static java.time.Duration.ofSeconds;
+
 public class Main {
     public  static DesiredCapabilities capabilities;
     public static AndroidDriver driver;
@@ -40,21 +46,19 @@ public class Main {
         int x = 100;
         while (x != 0) {
             System.out.println(x);
-            capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\iman akbar\\Downloads\\app-debug.apk");
+            capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\iman akbar\\Downloads\\inno-video (1).apk");
 
 
             driver = new AndroidDriver(url, capabilities);
 
 
-            Thread.sleep(5000);
-            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]")).click();
-            Thread.sleep(2000);
-            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View[3]")).click();
-            Thread.sleep(1000);
-            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.View[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[1]/android.view.View[1]")).click();
-            driver.findElement(By.id("exo_play_pause")).click();
-            driver.findElement(By.id("exo_play_pause")).click();
 
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[1]/android.view.View[1]")).click();
+            driver.findElement(By.id("exo_play_pause")).click();
+            driver.findElement(By.id("exo_play_pause")).click();
+            Thread.sleep(5000);
+            driver.quit();
 
 
         try {
@@ -66,4 +70,12 @@ public class Main {
         x--;
     }
     }
+    public static void pressByCoordinates(int x, int y, long seconds) {
+        new TouchAction(driver)
+                .press(point(x,y))
+                .waitAction(waitOptions(ofSeconds(seconds)))
+                .release()
+                .perform();
+    }
+
 }
