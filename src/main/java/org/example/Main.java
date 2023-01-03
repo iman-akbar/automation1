@@ -28,6 +28,7 @@ public class Main {
         prop.load(ip);
 
         System.out.println("Hello world!");
+//        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
         final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
         url = new URL(URL_STRING);
         capabilities = new DesiredCapabilities();
@@ -39,6 +40,7 @@ public class Main {
         while (x != 0) {
             System.out.println(x);
             capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\iman akbar\\Downloads\\inno-video (1).apk");
+//            capabilities.setCapability(MobileCapabilityType.APP, "src/main/java/org/example/inno-video (1).apk");
             driver = new AndroidDriver(url, capabilities);
             Thread.sleep(1000);
             driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/androidx.compose.ui.platform.ComposeView[1]/android.view.View[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[1]/android.view.View[1]")).click();
