@@ -44,7 +44,7 @@ public class Main {
 //            System.out.println(f);
 //            capabilities.setCapability(MobileCapabilityType.APP, "H:\\tesAppium5\\visionplus-inno.apk");
 //            capabilities.setCapability(MobileCapabilityType.APP, "\\src\\main\\java\\org\\example\\visionplus-inno.apk");
-            capabilities.setCapability(MobileCapabilityType.APP, "/home/ubuntu/tesAppium5/visionplus-inno.apk");
+            capabilities.setCapability(MobileCapabilityType.APP, "/home/ubuntu/automation1/visionplus-inno.apk");
 //            capabilities.setCapability(MobileCapabilityType.APP, "src/main/java/org/example/inno-video (1).apk");
             driver = new AndroidDriver(url, capabilities);
             Thread.sleep(1000);
