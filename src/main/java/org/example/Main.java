@@ -25,7 +25,7 @@ public class Main {
     public static URL url;
     public static void main(String[] args) throws IOException, InterruptedException {
         Properties prop=new Properties();
-        FileInputStream ip= new FileInputStream("H:/tesAppium5/config.properties");
+        FileInputStream ip= new FileInputStream("/home/ubuntu/automation1/config.properties");
         prop.load(ip);
 
         System.out.println("Hello world!");
