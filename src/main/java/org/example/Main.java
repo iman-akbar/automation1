@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -28,8 +29,8 @@ public class Main {
         prop.load(ip);
 
         System.out.println("Hello world!");
-//        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
-        final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
+        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
+//        final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
         url = new URL(URL_STRING);
         capabilities = new DesiredCapabilities();
         prop.getProperty("permission");
@@ -39,7 +40,11 @@ public class Main {
         int x = 100;
         while (x != 0) {
             System.out.println(x);
-            capabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\iman akbar\\Downloads\\inno-video (1).apk");
+//            File f = new File("src/main/java/org/example/visionplus-inno.apk");
+//            System.out.println(f);
+//            capabilities.setCapability(MobileCapabilityType.APP, "H:\\tesAppium5\\visionplus-inno.apk");
+//            capabilities.setCapability(MobileCapabilityType.APP, "\\src\\main\\java\\org\\example\\visionplus-inno.apk");
+            capabilities.setCapability(MobileCapabilityType.APP, "/home/ubuntu/tesAppium5/visionplus-inno.apk");
 //            capabilities.setCapability(MobileCapabilityType.APP, "src/main/java/org/example/inno-video (1).apk");
             driver = new AndroidDriver(url, capabilities);
             Thread.sleep(1000);
