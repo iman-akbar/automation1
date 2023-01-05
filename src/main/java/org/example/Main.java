@@ -28,6 +28,8 @@ public class Main {
         FileInputStream ip= new FileInputStream("/home/ubuntu/automation1/config.properties");
 //        FileInputStream ip= new FileInputStream("H:\\tesAppium5\\config.properties");
 //        FileInputStream apk= new FileInputStream("H:\\tesAppium5\\visionplus-inno.apk");
+//        File f = new File("src");
+        File fs = new File("visionplus-inno.apk");
         prop.load(ip);
 
         System.out.println("Hello world!");
@@ -44,7 +46,8 @@ public class Main {
             System.out.println(x);
 //            File f = new File("src/main/java/org/example/visionplus-inno.apk");
 //            System.out.println(f);
-            capabilities.setCapability(MobileCapabilityType.APP, "/root/tmp/visionplus-inno.apk");
+//            capabilities.setCapability(MobileCapabilityType.APP, "/root/tmp/visionplus-inno.apk");
+            capabilities.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 //            capabilities.setCapability(MobileCapabilityType.APP, "\\src\\main\\java\\org\\example\\visionplus-inno.apk");
 //            capabilities.setCapability(MobileCapabilityType.APP, "/home/ubuntu/automation1/visionplus-inno.apk");
 //            capabilities.setCapability(MobileCapabilityType.APP, "src/main/java/org/example/inno-video (1).apk");
