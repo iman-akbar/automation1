@@ -26,7 +26,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         Properties prop=new Properties();
 //        FileInputStream ip= new FileInputStream("/home/ubuntu/automation1/config.properties");
-        FileInputStream ip= new FileInputStream("H:\\tesAppium5\\config.properties");
+        FileInputStream ip= new FileInputStream("config.properties");
 //        FileInputStream apk= new FileInputStream("H:\\tesAppium5\\visionplus-inno.apk");
 //        File f = new File("src");
         File fs = new File("visionplus-inno prod.apk");
@@ -41,7 +41,7 @@ public class Main {
         prop.getProperty("emulatorName");
         prop.getProperty("emulatorUDID");
         prop.getProperty("automator");
-        int x = 75;
+        int x = 1;
         while (x != 0) {
             System.out.println(fs + "   " +x);
 //            File f = new File("src/main/java/org/example/visionplus-inno.apk");
