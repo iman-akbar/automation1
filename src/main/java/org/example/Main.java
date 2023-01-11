@@ -29,7 +29,7 @@ public class Main {
         FileInputStream ip= new FileInputStream("config.properties");
 //        FileInputStream apk= new FileInputStream("H:\\tesAppium5\\visionplus-inno.apk");
 //        File f = new File("src");
-        File fs = new File("visionplus-inno prod.apk");
+        File fs = new File("visionplus-inno.apk");
         prop.load(ip);
 
         System.out.println("Hello world!");
