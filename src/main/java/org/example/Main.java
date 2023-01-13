@@ -25,16 +25,16 @@ public class Main {
     public static URL url;
     public static void main(String[] args) throws IOException, InterruptedException {
         Properties prop=new Properties();
-//        FileInputStream ip= new FileInputStream("/home/ubuntu/automation1/config.properties");
-        FileInputStream ip= new FileInputStream("config.properties");
+        FileInputStream ip= new FileInputStream("/home/ubuntu/automation1/config.properties");
+//        FileInputStream ip= new FileInputStream("config.properties");
 //        FileInputStream apk= new FileInputStream("H:\\tesAppium5\\visionplus-inno.apk");
 //        File f = new File("src");
         File fs = new File("visionplus-inno.apk");
         prop.load(ip);
 
         System.out.println("Hello world!");
-//        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
-        final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
+        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
+//        final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
         url = new URL(URL_STRING);
         capabilities = new DesiredCapabilities();
         prop.getProperty("permission");
