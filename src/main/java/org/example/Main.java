@@ -33,8 +33,8 @@ public class Main {
         prop.load(ip);
 
         System.out.println("Hello world!");
-        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
-//        final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
+//        final String URL_STRING = "http://13.212.163.173:4444/wd/hub";
+        final String URL_STRING = "http://0.0.0.0:4723/wd/hub";
         url = new URL(URL_STRING);
         capabilities = new DesiredCapabilities();
         prop.getProperty("permission");
