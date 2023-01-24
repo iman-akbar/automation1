@@ -41,7 +41,7 @@ public class Main {
         prop.getProperty("emulatorName");
         prop.getProperty("emulatorUDID");
         prop.getProperty("automator");
-        int x = 341;
+        int x = 1;
         while (x != 0) {
             System.out.println(fs + "   " +x);
 //            File f = new File("src/main/java/org/example/visionplus-inno.apk");
